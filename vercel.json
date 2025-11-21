@@ -1,36 +1,23 @@
 {
   "version": 2,
-  "public": true,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
+  "builds": [
     {
-      "source": "/",
-      "destination": "/presentation_reveal",
-      "permanent": false
-    },
-    {
-      "source": "/presentacion",
-      "destination": "/presentation_complete"
+      "src": "**/*.html",
+      "use": "@vercel/static"
     }
   ],
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
+      "src": "/",
+      "dest": "/presentation_reveal.html"
+    },
+    {
+      "src": "/presentacion",
+      "dest": "/presentation_complete.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
