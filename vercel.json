@@ -3,11 +3,13 @@
   "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
       "destination": "/presentation_reveal.html"
-    },
+    }
+  ],
+  "redirects": [
     {
       "source": "/presentacion",
       "destination": "/presentation_complete.html"
