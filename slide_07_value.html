@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=720">
+    <title>Propuesta de Valor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            max-width: 1080px;
+            max-height: 720px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 45px 90px 45px;
+            position: relative;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 40px;
+            z-index: 20;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .footer-logo {
+            height: 50px;
+            width: auto;
+        }
+        .title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .question {
+            font-size: 18px;
+            color: #64748B;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .benefit-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+        .benefit-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 8px;
+        }
+        .benefit-text {
+            font-size: 13px;
+            color: #64748B;
+            line-height: 1.5;
+        }
+        .footer-question {
+            margin-top: auto;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1E40AF;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">¿Qué Beneficios Son Prioritarios?</div>
+    <div class="question">Ayúdenos a entender cuáles serían más valiosos para ustedes...</div>
+    
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-title">Eficiencia</div>
+            <div class="benefit-text">¿Reducir costos de mantenimiento y fallas?</div>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <div class="benefit-title">Visibilidad</div>
+            <div class="benefit-text">¿Monitoreo continuo de activos?</div>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon">🎯</div>
+            <div class="benefit-title">Decisiones</div>
+            <div class="benefit-text">¿Analytics predictivos?</div>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-title">Seguridad</div>
+            <div class="benefit-text">¿Menos riesgos humanos y ambientales?</div>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-title">Escalabilidad</div>
+            <div class="benefit-text">¿Soluciones modulares?</div>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon">💼</div>
+            <div class="benefit-title">ROI</div>
+            <div class="benefit-text">¿Resultados medibles?</div>
+        </div>
+    </div>
+    
+    <div class="footer-question">¿Cuál de estos resonaría más con su operación?</div>
+    
+    <div class="footer-bar">
+        <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/logo_variant_4.png" alt="GoalPraxis" class="footer-logo">
+    </div>
+</body>
+</html>

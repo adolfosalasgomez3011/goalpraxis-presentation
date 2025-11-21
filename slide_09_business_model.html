@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=720">
+    <title>Modelo de Negocio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            max-width: 1080px;
+            max-height: 720px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 45px 90px 45px;
+            position: relative;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 40px;
+            z-index: 20;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .footer-logo {
+            height: 50px;
+            width: auto;
+        }
+        .title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .question {
+            font-size: 18px;
+            color: #64748B;
+            text-align: center;
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+        .revenue-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+        .revenue-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid;
+            text-align: center;
+        }
+        .revenue-card.consult { border-color: #1E40AF; }
+        .revenue-card.implement { border-color: #16A34A; }
+        .revenue-card.recurring { border-color: #7C3AED; }
+        .revenue-card.results { border-color: #F59E0B; }
+        .card-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+        .card-title {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1E293B;
+        }
+        .card-description {
+            font-size: 12px;
+            color: #64748B;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .card-highlight {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+        .consult .card-highlight { color: #1E40AF; }
+        .implement .card-highlight { color: #16A34A; }
+        .recurring .card-highlight { color: #7C3AED; }
+        .results .card-highlight { color: #F59E0B; }
+        .footer-question {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1E40AF;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">¿Qué Modelo Comercial Prefieren?</div>
+    <div class="question">Estamos explorando diferentes estructuras de ingresos...</div>
+    
+    <div class="revenue-grid">
+        <div class="revenue-card consult">
+            <div class="card-icon">🎯</div>
+            <div class="card-title">Consultoría</div>
+            <div class="card-description">Evaluaciones y roadmaps estratégicos</div>
+            <div class="card-highlight">Precio Fijo por Proyecto</div>
+        </div>
+
+        <div class="revenue-card implement">
+            <div class="card-icon">⚙️</div>
+            <div class="card-title">Implementación</div>
+            <div class="card-description">Despliegue completo de soluciones IoT</div>
+            <div class="card-highlight">Según Alcance y Complejidad</div>
+        </div>
+
+        <div class="revenue-card recurring">
+            <div class="card-icon">🔄</div>
+            <div class="card-title">Servicios Gestionados</div>
+            <div class="card-description">Monitoreo, mantenimiento y soporte</div>
+            <div class="card-highlight">Ingresos Recurrentes Anuales</div>
+        </div>
+
+        <div class="revenue-card results">
+            <div class="card-icon">📈</div>
+            <div class="card-title">Basado en Resultados</div>
+            <div class="card-description">Pagos vinculados a KPIs alcanzados</div>
+            <div class="card-highlight">Compartimos el Éxito</div>
+        </div>
+    </div>
+    
+    <div class="footer-question">¿Cuál de estos modelos sería más atractivo para su empresa?</div>
+    
+    <div class="footer-bar">
+        <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/logo_variant_4.png" alt="GoalPraxis" class="footer-logo">
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=720">
+    <title>Mauricio San Roman - CV</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            max-width: 1080px;
+            max-height: 720px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            padding: 40px 50px;
+            padding-top: 50px;
+            position: relative;
+        }
+        .profile-section {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 30px;
+            border-right: 3px solid #16A34A;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #16A34A 0%, #22C55E 100%);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 10px 30px rgba(22, 163, 74, 0.3);
+            overflow: hidden;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+        .name {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .role {
+            font-size: 16px;
+            color: #16A34A;
+            font-weight: 600;
+            text-align: center;
+        }
+        .content-section {
+            flex: 1;
+            padding-left: 35px;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #16A34A;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #22C55E;
+            padding-bottom: 6px;
+        }
+        .bio-text {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .highlight-badge {
+            background: linear-gradient(135deg, #16A34A 0%, #22C55E 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(22, 163, 74, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 40px;
+        }
+        .footer-logo {
+            height: 35px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/MauricioSanRoman.jpeg" alt="Mauricio San Roman">
+        </div>
+        <div class="name">Mauricio<br>San Roman</div>
+        <div class="role">Co-Fundador</div>
+    </div>
+    
+    <div class="content-section">
+        <div class="section-title">Perfil Profesional</div>
+        <div class="bio-text">
+            Profesional con más de 20 años de experiencia aplicando tecnologías en la minería a gran escala en Perú y Latinoamérica, y más de cuatro años como gerente general en una empresa líder en soluciones tecnológicas para la minería en Perú, asegurando la sostenibilidad y el crecimiento del valor.
+        </div>
+        
+        <div class="section-title">Experiencia Clave</div>
+        <div class="bio-text">
+            Reconocido por liderar equipos de alto rendimiento, la gestión de proyectos y la entrega de resultados bajo presión. Su experiencia abarca la gestión y administración empresarial, así como la gestión de proyectos, con un fuerte enfoque en la satisfacción del cliente y vocación para resolver problemas complejos mientras impulsa la innovación en el sector minero.
+        </div>
+        
+        <div class="section-title">Especialización Técnica</div>
+        <div class="bio-text">
+            Cuenta con un sólido historial en la implementación de soluciones tecnológicas que mejoran las operaciones y el mantenimiento, así como en la gestión de sistemas de flotas en minería superficial, donde ha alcanzado un importante nivel de especialización. Su experiencia también incluye el diseño y la gestión de diversos proyectos de telecomunicaciones, análisis de datos y de control.
+        </div>
+        
+        <div class="highlights">
+            <span class="highlight-badge">20+ años experiencia</span>
+            <span class="highlight-badge">Minería & Tecnología</span>
+            <span class="highlight-badge">Gestión de Flotas</span>
+            <span class="highlight-badge">Gerente General</span>
+            <span class="highlight-badge">Telecomunicaciones</span>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/logo_variant_4.png" alt="GoalPraxis" class="footer-logo">
+    </div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalPraxis - Presentación de Validación de Mercado</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E40AF 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+        
+        .logo-img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .main-title {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        
+        .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+        
+        .main-action {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+            color: white;
+            text-decoration: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(245, 158, 11, 0.6);
+        }
+        
+        .slides-section {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: white;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .slide-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        .slide-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .slide-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .slide-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .slide-description {
+            font-size: 13px;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+        
+        .instructions {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        .instructions h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #F59E0B;
+        }
+        
+        .instructions p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+        
+        .instructions ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .instructions strong {
+            color: #3B82F6;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .slides-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="main-title">GoalPraxis Technology</div>
+            <div class="tagline">Presentación de Validación de Mercado - Minería</div>
+        </div>
+        
+        <div class="main-action">
+            <a href="presentation_complete.html" class="cta-button">🚀 Ver Presentación Completa</a>
+        </div>
+        
+        <div class="slides-section">
+            <div class="section-title">Estructura de la Presentación (14 Slides)</div>
+            
+            <div class="slides-grid">
+                <a href="slide_01_title.html" class="slide-card">
+                    <div class="slide-number">1</div>
+                    <div class="slide-title">Portada</div>
+                    <div class="slide-description">Transforming Mining through IoT, Analytics, and AI</div>
+                </a>
+                
+                <a href="slide_02_cv_erick.html" class="slide-card">
+                    <div class="slide-number">2</div>
+                    <div class="slide-title">Erick Enríquez</div>
+                    <div class="slide-description">Co-Fundador | Telecomunicaciones e Innovación Digital</div>
+                </a>
+                
+                <a href="slide_03_cv_mauricio.html" class="slide-card">
+                    <div class="slide-number">3</div>
+                    <div class="slide-title">Mauricio San Roman</div>
+                    <div class="slide-description">Co-Fundador | Telecomunicaciones e Innovación Digital</div>
+                </a>
+                
+                <a href="slide_04_cv_adolfo.html" class="slide-card">
+                    <div class="slide-number">4</div>
+                    <div class="slide-title">Adolfo Salas</div>
+                    <div class="slide-description">Co-Fundador | Minería, Energía e Infraestructura</div>
+                </a>
+                
+                <a href="slide_05_problem.html" class="slide-card">
+                    <div class="slide-number">5</div>
+                    <div class="slide-title">Desafíos de la Industria</div>
+                    <div class="slide-description">Validación de problemas operacionales críticos</div>
+                </a>
+                
+                <a href="slide_06_solution.html" class="slide-card">
+                    <div class="slide-number">6</div>
+                    <div class="slide-title">Nuestra Solución</div>
+                    <div class="slide-description">Modelo SolaaS: Consultoría → Implementación → Operación</div>
+                </a>
+                
+                <a href="slide_07_value.html" class="slide-card">
+                    <div class="slide-number">7</div>
+                    <div class="slide-title">Propuesta de Valor</div>
+                    <div class="slide-description">Beneficios y priorización con expertos</div>
+                </a>
+                
+                <a href="slide_08_differentiation.html" class="slide-card">
+                    <div class="slide-number">8</div>
+                    <div class="slide-title">Diferenciadores Clave</div>
+                    <div class="slide-description">Ventajas competitivas y validación</div>
+                </a>
+                
+                <a href="slide_09_business_model.html" class="slide-card">
+                    <div class="slide-number">9</div>
+                    <div class="slide-title">Modelo de Negocio</div>
+                    <div class="slide-description">4 flujos de ingresos complementarios</div>
+                </a>
+                
+                <a href="slide_10_gtm.html" class="slide-card">
+                    <div class="slide-number">10</div>
+                    <div class="slide-title">Go-to-Market</div>
+                    <div class="slide-description">Estrategia de entrada en 3 fases</div>
+                </a>
+                
+                <a href="slide_11_ecosystem.html" class="slide-card">
+                    <div class="slide-number">11</div>
+                    <div class="slide-title">Ecosistema Tecnológico</div>
+                    <div class="slide-description">Partners IoT, Cloud, Analytics y OEMs</div>
+                </a>
+                
+                <a href="slide_12_validation_questions.html" class="slide-card">
+                    <div class="slide-number">12</div>
+                    <div class="slide-title">Preguntas de Validación</div>
+                    <div class="slide-description">7 preguntas clave para expertos mineros</div>
+                </a>
+                
+                <a href="slide_13_thank_you.html" class="slide-card">
+                    <div class="slide-number">13</div>
+                    <div class="slide-title">Agradecimiento</div>
+                    <div class="slide-description">Fase de validación de mercado</div>
+                </a>
+                
+                <a href="slide_14_closing.html" class="slide-card">
+                    <div class="slide-number">14</div>
+                    <div class="slide-title">Cierre Dinámico</div>
+                    <div class="slide-description">Call to action y contacto</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>📋 Instrucciones de Uso</h2>
+            
+            <p><strong>Opción 1: Presentación Completa (Recomendada)</strong></p>
+            <ul>
+                <li>Haz clic en el botón naranja "Ver Presentación Completa"</li>
+                <li>Navega con las flechas del teclado (← →) o los botones en pantalla</li>
+                <li>Usa los puntos del menú lateral para saltar a slides específicas</li>
+                <li>Presiona 'Home' para ir al inicio o 'End' para ir al final</li>
+            </ul>
+            
+            <p><strong>Opción 2: Slides Individuales</strong></p>
+            <ul>
+                <li>Haz clic en cualquier tarjeta para ver una slide específica</li>
+                <li>Útil para revisión o edición de contenido</li>
+                <li>Cada slide es independiente (1080x720 pixels)</li>
+            </ul>
+            
+            <p><strong>🎯 Propósito de la Presentación</strong></p>
+            <p>Esta presentación está diseñada para <strong>validación de mercado</strong> con expertos de la industria minera. El tono es exploratorio y busca feedback sobre problemas, soluciones y prioridades, no es una presentación de ventas.</p>
+            
+            <p><strong>🚀 Deployment en Vercel</strong></p>
+            <ul>
+                <li>Sube toda la carpeta HTML_Full a Vercel</li>
+                <li>El archivo principal es: <strong>presentation_complete.html</strong></li>
+                <li>Asegúrate de incluir también la carpeta Logos (ruta relativa: ../../Logos/)</li>
+                <li>Todas las slides están auto-escaladas para dispositivos móviles</li>
+            </ul>
+            
+            <p><strong>👥 Equipo Fundador</strong></p>
+            <ul>
+                <li><strong>Erick Enríquez:</strong> Telecomunicaciones e IoT (25+ años)</li>
+                <li><strong>Mauricio San Roman:</strong> Telecomunicaciones e IoT (25+ años)</li>
+                <li><strong>Adolfo Salas:</strong> Minería y Energía | Hatch Partner (24+ años)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

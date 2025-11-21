@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalPraxis - Presentación Completa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/black.css">
+    <style>
+        .reveal {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .reveal .slides {
+            text-align: center;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+            font-weight: 700;
+        }
+        .reveal section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .reveal section iframe {
+            width: 1080px;
+            height: 720px;
+            border: none;
+            transform-origin: center center;
+            transform: scale(0.88);
+        }
+        @media (max-width: 1200px) {
+            .reveal section iframe {
+                transform: scale(0.7);
+            }
+        }
+        @media (max-width: 900px) {
+            .reveal section iframe {
+                transform: scale(0.5);
+            }
+        }
+        /* Custom controls styling */
+        .reveal .controls {
+            color: #1E40AF;
+        }
+        .reveal .progress {
+            color: #1E40AF;
+        }
+        /* Slide counter */
+        .reveal .slide-number {
+            font-size: 18px;
+            color: #1E40AF;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Title -->
+            <section>
+                <iframe src="slide_01_title.html"></iframe>
+            </section>
+            
+            <!-- Slide 2: CV Erick -->
+            <section>
+                <iframe src="slide_02_cv_erick.html"></iframe>
+            </section>
+            
+            <!-- Slide 3: CV Mauricio -->
+            <section>
+                <iframe src="slide_03_cv_mauricio.html"></iframe>
+            </section>
+            
+            <!-- Slide 4: CV Adolfo -->
+            <section>
+                <iframe src="slide_04_cv_adolfo.html"></iframe>
+            </section>
+            
+            <!-- Slide 5: Problem -->
+            <section>
+                <iframe src="slide_05_problem.html"></iframe>
+            </section>
+            
+            <!-- Slide 6: Solution -->
+            <section>
+                <iframe src="slide_06_solution.html"></iframe>
+            </section>
+            
+            <!-- Slide 7: Value -->
+            <section>
+                <iframe src="slide_07_value.html"></iframe>
+            </section>
+            
+            <!-- Slide 8: Differentiation -->
+            <section>
+                <iframe src="slide_08_differentiation.html"></iframe>
+            </section>
+            
+            <!-- Slide 9: Business Model -->
+            <section>
+                <iframe src="slide_09_business_model.html"></iframe>
+            </section>
+            
+            <!-- Slide 10: Go-to-Market -->
+            <section>
+                <iframe src="slide_10_gtm.html"></iframe>
+            </section>
+            
+            <!-- Slide 11: Ecosystem -->
+            <section>
+                <iframe src="slide_11_ecosystem.html"></iframe>
+            </section>
+            
+            <!-- Slide 12: Validation Questions -->
+            <section>
+                <iframe src="slide_12_validation_questions.html"></iframe>
+            </section>
+            
+            <!-- Slide 13: Closing -->
+            <section>
+                <iframe src="slide_14_closing.html"></iframe>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+    <script>
+        // Initialize Reveal.js with enhanced controls
+        Reveal.initialize({
+            // Display settings
+            width: 1080,
+            height: 720,
+            margin: 0.04,
+            
+            // Navigation controls
+            controls: true,
+            controlsTutorial: true,
+            controlsLayout: 'bottom-right',
+            controlsBackArrows: 'faded',
+            
+            // Progress bar
+            progress: true,
+            
+            // Slide number
+            slideNumber: 'c/t', // current/total
+            showSlideNumber: 'all',
+            
+            // Hash for URLs
+            hash: true,
+            
+            // Keyboard navigation
+            keyboard: true,
+            
+            // Overview mode with 'O' key
+            overview: true,
+            
+            // Center slides vertically
+            center: true,
+            
+            // Touch navigation on mobile
+            touch: true,
+            
+            // Loop slides
+            loop: false,
+            
+            // Enable fragments
+            fragments: true,
+            
+            // Embedded content settings
+            embedded: false,
+            
+            // Presenter mode with 'S' key
+            help: true,
+            
+            // Transitions
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            transitionSpeed: 'default', // default/fast/slow
+            
+            // Background transitions
+            backgroundTransition: 'fade',
+            
+            // PDF export settings
+            pdfMaxPagesPerSlide: 1,
+            pdfSeparateFragments: false,
+            
+            // Keyboard shortcuts
+            keyboard: {
+                // 'P' for presenter mode (opens in new window)
+                80: function() {
+                    window.open(window.location.href + '?print-pdf', '_blank');
+                },
+                // 'F' for fullscreen
+                70: function() {
+                    if (document.fullscreenElement) {
+                        document.exitFullscreen();
+                    } else {
+                        document.documentElement.requestFullscreen();
+                    }
+                },
+                // 'G' to go to specific slide
+                71: function() {
+                    let slideNum = prompt('Go to slide number:');
+                    if (slideNum) {
+                        Reveal.slide(parseInt(slideNum) - 1);
+                    }
+                },
+                // 'Home' to first slide
+                36: function() {
+                    Reveal.slide(0);
+                },
+                // 'End' to last slide
+                35: function() {
+                    Reveal.slide(Reveal.getTotalSlides() - 1);
+                }
+            }
+        });
+
+        // Add keyboard shortcuts info on load
+        window.addEventListener('load', function() {
+            console.log(`
+╔════════════════════════════════════════════╗
+║   GoalPraxis Presentation - Shortcuts     ║
+╠════════════════════════════════════════════╣
+║ Arrow Keys: Navigate slides                ║
+║ O: Overview mode (see all slides)          ║
+║ S: Speaker notes view                      ║
+║ F: Fullscreen toggle                       ║
+║ G: Go to specific slide                    ║
+║ Home: First slide                          ║
+║ End: Last slide                            ║
+║ Esc: Exit overview/zoom                    ║
+║ ?: Show keyboard shortcuts help            ║
+╚════════════════════════════════════════════╝
+            `);
+        });
+
+        // Add custom event listeners
+        Reveal.on('slidechanged', event => {
+            console.log(`Slide ${event.indexh + 1} of ${Reveal.getTotalSlides()}`);
+        });
+    </script>
+</body>
+</html>

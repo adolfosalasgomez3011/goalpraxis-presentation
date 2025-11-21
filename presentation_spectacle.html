@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalPraxis - Presentación Completa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/black.css">
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0F172A;
+        }
+        #root { width: 100vw; height: 100vh; }
+        
+        /* Custom Spectacle Overrides */
+        .spectacle-deck { background: #0F172A !important; }
+        
+        /* Slide Styles */
+        .slide-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: white;
+        }
+        
+        .slide-title {
+            font-size: 58px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        
+        .slide-subtitle {
+            font-size: 22px;
+            font-weight: 300;
+            text-align: center;
+            max-width: 850px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 35px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .profile-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 0 auto 20px;
+        }
+        
+        .profile-name {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .profile-role {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .bio-section {
+            margin-bottom: 20px;
+        }
+        
+        .bio-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid currentColor;
+        }
+        
+        .bio-text {
+            font-size: 14px;
+            line-height: 1.7;
+            opacity: 0.9;
+            text-align: justify;
+        }
+        
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.4);
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .card-text {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .modules-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1000px;
+            align-items: center;
+        }
+        
+        .module-card {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .module-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            color: #1E40AF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 0 auto 15px;
+        }
+        
+        .module-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .arrow {
+            font-size: 40px;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .logo-img {
+            height: 120px;
+            width: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 10px 40px rgba(0,0,0,0.5));
+        }
+        
+        .closing-message {
+            font-size: 56px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+        
+        .closing-sub {
+            font-size: 28px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-box {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(239, 68, 68, 0.3) 100%);
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .question-list {
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        .question-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3B82F6;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Gradient Backgrounds */
+        .bg-gradient-blue { background: linear-gradient(135deg, #0F172A 0%, #1E40AF 50%, #3B82F6 100%); }
+        .bg-gradient-light { background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); color: #1E293B; }
+        .bg-gradient-dark { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); }
+        .bg-gradient-multi { background: linear-gradient(135deg, #0F172A 0%, #1E40AF 30%, #7C3AED 70%, #F59E0B 100%); }
+        
+        /* Color Themes */
+        .theme-blue .profile-avatar { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); }
+        .theme-blue .bio-title { color: #3B82F6; }
+        .theme-blue .badge { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); }
+        
+        .theme-green .profile-avatar { background: linear-gradient(135deg, #16A34A 0%, #22C55E 100%); }
+        .theme-green .bio-title { color: #22C55E; }
+        .theme-green .badge { background: linear-gradient(135deg, #16A34A 0%, #22C55E 100%); }
+        
+        .theme-purple .profile-avatar { background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%); }
+        .theme-purple .bio-title { color: #A78BFA; }
+        .theme-purple .badge { background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%); }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { Deck, Slide, Heading, Text, FlexBox, Box, Image, UnorderedList, ListItem, Grid } = window.Spectacle;
+        
+        const theme = {
+            colors: {
+                primary: '#1E40AF',
+                secondary: '#3B82F6',
+                tertiary: '#F59E0B'
+            },
+            fonts: {
+                header: '"Segoe UI", system-ui, -apple-system, sans-serif',
+                text: '"Segoe UI", system-ui, -apple-system, sans-serif'
+            }
+        };
+        
+        function Presentation() {
+            return (
+                <Deck theme={theme} template={() => null}>
+                    {/* Slide 1: Title */}
+                    <Slide className="bg-gradient-blue">
+                        <div className="slide-container">
+                            <h1 className="slide-title">Transforming Mining through IoT, Analytics, and AI</h1>
+                            <p className="slide-subtitle">
+                                We deliver expert-driven solutions that transform mining and infrastructure 
+                                through cutting-edge technology, hands-on implementation, and shared success
+                            </p>
+                        </div>
+                    </Slide>
+                    
+                    {/* Slide 2: Erick Enríquez */}
+                    <Slide className="bg-gradient-light theme-blue">
+                        <div className="profile-grid">
+                            <div>
+                                <div className="profile-avatar">EE</div>
+                                <h2 className="profile-name">Erick<br/>Enríquez</h2>
+                                <p className="profile-role">Co-Fundador</p>
+                            </div>
+                            <div>
+                                <div className="bio-section">
+                                    <h3 className="bio-title">Perfil Profesional</h3>
+                                    <p className="bio-text">
+                                        MBA en Dirección y Gestión Empresarial, Máster Europeo en Dirección de Marketing 
+                                        e Ingeniero Electrónico. Ejecutivo senior en telecomunicaciones e innovación digital, 
+                                        con más de 25 años de experiencia liderando proyectos de conectividad, transformación 
+                                        digital e inclusión tecnológica en Perú y Latinoamérica.
+                                    </p>
+                                </div>
+                                <div className="bio-section">
+                                    <h3 className="bio-title">Experiencia Clave</h3>
+                                    <p className="bio-text">
+                                        Ha ocupado cargos de alta dirección en empresas del sector telecomunicaciones, 
+                                        internet e innovación tecnológica, destacando en la expansión de servicios de 
+                                        internet por fibra óptica, telefonía móvil e IoT.
+                                    </p>
+                                </div>
+                                <div className="badges">
+                                    <span className="badge">25+ años experiencia</span>
+                                    <span className="badge">Telecomunicaciones</span>
+                                    <span className="badge">IoT</span>
+                                    <span className="badge">Transformación Digital</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Slide>
+                    
+                    {/* Slide 3: Mauricio San Roman */}
+                    <Slide className="bg-gradient-light theme-green">
+                        <div className="profile-grid">
+                            <div>
+                                <div className="profile-avatar">MS</div>
+                                <h2 className="profile-name">Mauricio<br/>San Roman</h2>
+                                <p className="profile-role">Co-Fundador</p>
+                            </div>
+                            <div>
+                                <div className="bio-section">
+                                    <h3 className="bio-title">Perfil Profesional</h3>
+                                    <p className="bio-text">
+                                        MBA en Dirección y Gestión Empresarial, Máster Europeo en Dirección de Marketing 
+                                        e Ingeniero Electrónico. Ejecutivo senior en telecomunicaciones e innovación digital, 
+                                        con más de 25 años de experiencia liderando proyectos de conectividad, transformación 
+                                        digital e inclusión tecnológica en Perú y Latinoamérica.
+                                    </p>
+                                </div>
+                                <div className="bio-section">
+                                    <h3 className="bio-title">Experiencia Clave</h3>
+                                    <p className="bio-text">
+                                        Ha ocupado cargos de alta dirección en empresas del sector telecomunicaciones, 
+                                        internet e innovación tecnológica, destacando en la expansión de servicios de 
+                                        internet por fibra óptica, telefonía móvil e IoT.
+                                    </p>
+                                </div>
+                                <div className="badges">
+                                    <span className="badge">25+ años experiencia</span>
+                                    <span className="badge">Telecomunicaciones</span>
+                                    <span className="badge">IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Slide>
+                    
+                    {/* Slide 4: Adolfo Salas */}
+                    <Slide className="bg-gradient-light theme-purple">
+                        <div className="profile-grid">
+                            <div>
+                                <div className="profile-avatar">AS</div>
+                                <h2 className="profile-name">Adolfo<br/>Salas</h2>
+                                <p className="profile-role">Co-Fundador</p>
+                            </div>
+                            <div>
+                                <div className="bio-section">
+                                    <h3 className="bio-title">Perfil Profesional</h3>
+                                    <p className="bio-text">
+                                        Wharton C-Suite Executive Program, MBA ESAN, Ingeniería Informática y Ingeniero 
+                                        Electrónico UNSA. Ejecutivo senior en minería, energía e infraestructura, con más 
+                                        de 24 años de experiencia estratégica, comercial y operativa en Perú y Latinoamérica.
+                                    </p>
+                                </div>
+                                <div className="bio-section">
+                                    <h3 className="bio-title">Logros Destacados</h3>
+                                    <p className="bio-text">
+                                        Ha gestionado responsabilidades comerciales y operativas superiores a USD 350 millones 
+                                        anuales, liderando equipos de más de 600 personas. Advisory Principal (Partner) en 
+                                        Hatch Associates, con presencia activa en más de 15 países.
+                                    </p>
+                                </div>
+                                <div className="badges">
+                                    <span className="badge">24+ años experiencia</span>
+                                    <span className="badge">Minería & Energía</span>
+                                    <span className="badge">Hatch Partner</span>
+                                    <span className="badge">15+ países</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Slide>
+                    
+                    {/* Slide 5: Desafíos */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                Desafíos de la Industria Minera
+                            </h2>
+                            <div className="cards-grid">
+                                <div className="card">
+                                    <h3 className="card-title">🔧 Operaciones Ineficientes</h3>
+                                    <p className="card-text">
+                                        ¿Es la baja eficiencia operacional uno de sus principales desafíos? 
+                                        ¿Qué porcentaje de mejora consideraría significativo?
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">📊 Datos Fragmentados</h3>
+                                    <p className="card-text">
+                                        ¿Cuánto tiempo pierden sus equipos integrando datos de múltiples sistemas? 
+                                        ¿Es esto un obstáculo real?
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">⚠️ Seguridad y Cumplimiento</h3>
+                                    <p className="card-text">
+                                        ¿Qué tan crítico es para ustedes el monitoreo en tiempo real para prevenir 
+                                        incidentes de seguridad?
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">💰 Costos Operativos</h3>
+                                    <p className="card-text">
+                                        ¿En qué áreas ven mayor potencial de reducción de costos: energía, 
+                                        mantenimiento, logística?
+                                    </p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 6: Solución */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                Nuestra Solución: SolaaS
+                            </h2>
+                            <p className="slide-subtitle" style={{marginBottom: '50px'}}>
+                                Solution as a Service - Modelo integral de transformación
+                            </p>
+                            <div className="modules-container">
+                                <div className="module-card">
+                                    <div className="module-number">1</div>
+                                    <h3 className="module-title">Consultoría</h3>
+                                    <p className="card-text">
+                                        Diagnóstico, diseño de arquitectura IoT y estrategia de datos
+                                    </p>
+                                </div>
+                                <div className="arrow">→</div>
+                                <div className="module-card">
+                                    <div className="module-number">2</div>
+                                    <h3 className="module-title">Implementación</h3>
+                                    <p className="card-text">
+                                        Despliegue de sensores, integración de sistemas y desarrollo de analytics
+                                    </p>
+                                </div>
+                                <div className="arrow">→</div>
+                                <div className="module-card">
+                                    <div className="module-number">3</div>
+                                    <h3 className="module-title">Operación</h3>
+                                    <p className="card-text">
+                                        Monitoreo 24/7, mantenimiento predictivo y optimización continua
+                                    </p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 7: Valor */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                Propuesta de Valor
+                            </h2>
+                            <p className="slide-subtitle" style={{marginBottom: '30px'}}>
+                                ¿Cuáles de estos beneficios son más relevantes para su operación?
+                            </p>
+                            <div className="cards-grid" style={{gridTemplateColumns: 'repeat(3, 1fr)'}}>
+                                <div className="card">
+                                    <h3 className="card-title">📈 Eficiencia Operacional</h3>
+                                    <p className="card-text">Aumento de productividad hasta 25%</p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">💵 Reducción de Costos</h3>
+                                    <p className="card-text">Optimización de recursos y energía</p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🛡️ Seguridad Mejorada</h3>
+                                    <p className="card-text">Prevención proactiva de incidentes</p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🔮 Decisiones Data-Driven</h3>
+                                    <p className="card-text">Analytics e IA en tiempo real</p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🌱 Sostenibilidad</h3>
+                                    <p className="card-text">Reducción de huella ambiental</p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">⚡ ROI Acelerado</h3>
+                                    <p className="card-text">Retorno de inversión en 12-18 meses</p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 8: Diferenciación */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                ¿Por qué GoalPraxis?
+                            </h2>
+                            <div className="cards-grid">
+                                <div className="card">
+                                    <h3 className="card-title">🎯 Especialización Minera</h3>
+                                    <p className="card-text">
+                                        Experiencia específica en minería vs. consultoras genéricas. 
+                                        ¿Es esto una ventaja decisiva?
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🤝 Modelo de Riesgo Compartido</h3>
+                                    <p className="card-text">
+                                        Parte de nuestros ingresos atados a resultados. 
+                                        ¿Esto reduciría su riesgo de inversión?
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🔧 Implementación End-to-End</h3>
+                                    <p className="card-text">
+                                        No solo consultamos, también ejecutamos. 
+                                        ¿Prefieren un socio integral?
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🌐 Ecosistema de Partners</h3>
+                                    <p className="card-text">
+                                        Alianzas con líderes tecnológicos globales. 
+                                        ¿Qué valor le dan a esto?
+                                    </p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 9: Modelo de Negocio */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                Modelo de Negocio
+                            </h2>
+                            <div className="cards-grid">
+                                <div className="card">
+                                    <h3 className="card-title">💼 Consultoría</h3>
+                                    <p className="card-text">
+                                        Proyectos de diagnóstico e ingeniería. Fees fijos por proyecto.
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🚀 Implementación</h3>
+                                    <p className="card-text">
+                                        Despliegue de soluciones IoT y Analytics. Fees basados en alcance.
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🔄 Operación Recurrente</h3>
+                                    <p className="card-text">
+                                        Monitoreo 24/7 y mantenimiento. Suscripción mensual/anual.
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">🎯 Performance-Based</h3>
+                                    <p className="card-text">
+                                        Ingresos atados a KPIs alcanzados. Riesgo compartido con el cliente.
+                                    </p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 10: GTM */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                Estrategia Go-to-Market
+                            </h2>
+                            <p className="slide-subtitle" style={{marginBottom: '30px'}}>
+                                ¿Cuál sería el mejor punto de entrada en su organización?
+                            </p>
+                            <div className="modules-container">
+                                <div className="module-card">
+                                    <div className="module-number">1</div>
+                                    <h3 className="module-title">Piloto</h3>
+                                    <p className="card-text">
+                                        Proyecto piloto en área crítica. Demostración rápida de valor (3-6 meses).
+                                    </p>
+                                </div>
+                                <div className="arrow">→</div>
+                                <div className="module-card">
+                                    <div className="module-number">2</div>
+                                    <h3 className="module-title">Expansión</h3>
+                                    <p className="card-text">
+                                        Escalamiento a otras áreas de la operación. Multiplica el valor (6-12 meses).
+                                    </p>
+                                </div>
+                                <div className="arrow">→</div>
+                                <div className="module-card">
+                                    <div className="module-number">3</div>
+                                    <h3 className="module-title">Transformación</h3>
+                                    <p className="card-text">
+                                        Digital twin completo de la mina. Operación autónoma (12-24 meses).
+                                    </p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 11: Ecosistema */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '48px', marginBottom: '40px'}}>
+                                Ecosistema de Partners
+                            </h2>
+                            <div className="cards-grid">
+                                <div className="card">
+                                    <h3 className="card-title">📡 IoT & Sensores</h3>
+                                    <p className="card-text">
+                                        Cisco, Siemens, Rockwell Automation, Honeywell
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">☁️ Cloud & Edge</h3>
+                                    <p className="card-text">
+                                        AWS, Microsoft Azure, Google Cloud Platform
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">📊 Analytics & AI</h3>
+                                    <p className="card-text">
+                                        Databricks, Snowflake, DataRobot, IBM Watson
+                                    </p>
+                                </div>
+                                <div className="card">
+                                    <h3 className="card-title">⚙️ OEMs Mineros</h3>
+                                    <p className="card-text">
+                                        Caterpillar, Komatsu, Sandvik, Epiroc
+                                    </p>
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 12: Preguntas de Validación */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '42px', marginBottom: '30px'}}>
+                                Preguntas para Validación
+                            </h2>
+                            <div className="question-list">
+                                <div className="question-item">
+                                    <strong>1.</strong> ¿Cuáles son los 3 principales problemas operacionales que enfrenta actualmente?
+                                </div>
+                                <div className="question-item">
+                                    <strong>2.</strong> ¿Qué soluciones han intentado y por qué no funcionaron completamente?
+                                </div>
+                                <div className="question-item">
+                                    <strong>3.</strong> ¿Cuál es el ROI mínimo que esperarían para justificar una inversión en IoT/Analytics?
+                                </div>
+                                <div className="question-item">
+                                    <strong>4.</strong> ¿Prefieren trabajar con un partner integral o especialistas por área?
+                                </div>
+                                <div className="question-item">
+                                    <strong>5.</strong> ¿Qué tan abiertos están a modelos de riesgo compartido basados en resultados?
+                                </div>
+                                <div className="question-item">
+                                    <strong>6.</strong> ¿Cuál sería el proceso de decisión y timeline para un proyecto piloto?
+                                </div>
+                                <div className="question-item">
+                                    <strong>7.</strong> ¿Qué stakeholders internos deberían estar involucrados desde el inicio?
+                                </div>
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 13: Thank You */}
+                    <Slide className="bg-gradient-dark">
+                        <FlexBox flexDirection="column" alignItems="center" justifyContent="center" height="100%">
+                            <h2 className="slide-title" style={{fontSize: '56px', marginBottom: '30px'}}>
+                                Gracias por su Tiempo
+                            </h2>
+                            <p className="slide-subtitle" style={{fontSize: '28px', marginBottom: '40px'}}>
+                                Estamos en fase de validación y su feedback es invaluable
+                            </p>
+                            <p className="slide-subtitle" style={{fontSize: '20px', opacity: 0.8}}>
+                                Esta conversación nos ayudará a refinar nuestra propuesta de valor<br/>
+                                y asegurar que realmente resolvemos problemas críticos del sector
+                            </p>
+                        </FlexBox>
+                    </Slide>
+                    
+                    {/* Slide 14: Closing */}
+                    <Slide className="bg-gradient-multi">
+                        <FlexBox flexDirection="column" alignItems="center" justifyContent="center" height="100%">
+                            <img src="../../Logos/logo_variant_4.png" alt="GoalPraxis" className="logo-img" />
+                            <h1 className="closing-message">¡Gracias por su tiempo!</h1>
+                            <p className="closing-sub">Su experiencia es invaluable para nosotros</p>
+                            <div className="cta-box">Construyamos juntos el futuro de la minería</div>
+                            <div className="contact-info">
+                                www.goalpraxis.com<br/>
+                                contacto@goalpraxis.com
+                            </div>
+                        </FlexBox>
+                    </Slide>
+                </Deck>
+            );
+        }
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<Presentation />);
+    </script>
+</body>
+</html>

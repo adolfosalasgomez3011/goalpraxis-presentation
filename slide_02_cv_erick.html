@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=720">
+    <title>Erick Enríquez - CV</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            max-width: 1080px;
+            max-height: 720px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            padding: 40px 50px;
+            padding-top: 50px;
+            position: relative;
+        }
+        .profile-section {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 30px;
+            border-right: 3px solid #1E40AF;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+            overflow: hidden;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+        .name {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .role {
+            font-size: 16px;
+            color: #3B82F6;
+            font-weight: 600;
+            text-align: center;
+        }
+        .content-section {
+            flex: 1;
+            padding-left: 35px;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1E40AF;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #3B82F6;
+            padding-bottom: 6px;
+        }
+        .bio-text {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .highlight-badge {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(30, 64, 175, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 40px;
+        }
+        .footer-logo {
+            height: 35px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/ErickEnriquez.png" alt="Erick Enríquez">
+        </div>
+        <div class="name">Erick<br>Enríquez</div>
+        <div class="role">Co-Fundador</div>
+    </div>
+    
+    <div class="content-section">
+        <div class="section-title">Perfil Profesional</div>
+        <div class="bio-text">
+            MBA en Dirección y Gestión Empresarial, Máster Europeo en Dirección de Marketing e Ingeniero Electrónico. Ejecutivo senior en telecomunicaciones e innovación digital, con más de 25 años de experiencia liderando proyectos de conectividad, transformación digital e inclusión tecnológica en Perú y Latinoamérica.
+        </div>
+        
+        <div class="section-title">Experiencia Clave</div>
+        <div class="bio-text">
+            Ha ocupado cargos de alta dirección en empresas del sector telecomunicaciones, internet e innovación tecnológica, destacando en la expansión de servicios de internet por fibra óptica, telefonía móvil, servicio de valor agregado e Internet de las Cosas (IoT). Cuenta con sólida experiencia en la gestión de equipos multiculturales, diseño de estrategias de conectividad e implementación de soluciones que promueven la transformación digital.
+        </div>
+        
+        <div class="section-title">Rol Actual</div>
+        <div class="bio-text">
+            Socio y miembro del directorio de Kapital Telekom S.A.C., Chiqa Soluciones Financieras S.A.C., Mobile Solution S.A.C., Multibox S.A.C. y Moche Inversiones S.A.C., desde donde contribuye al crecimiento y modernización tecnológica de diversas organizaciones.
+        </div>
+        
+        <div class="highlights">
+            <span class="highlight-badge">25+ años experiencia</span>
+            <span class="highlight-badge">Telecomunicaciones</span>
+            <span class="highlight-badge">IoT</span>
+            <span class="highlight-badge">Transformación Digital</span>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/logo_variant_4.png" alt="GoalPraxis" class="footer-logo">
+    </div>
+</body>
+</html>

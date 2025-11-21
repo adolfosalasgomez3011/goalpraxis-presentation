@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=720">
+    <title>Adolfo Salas - CV</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            max-width: 1080px;
+            max-height: 720px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            padding: 50px 40px 60px 40px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .profile-section {
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 20px;
+            border-right: 3px solid #7C3AED;
+            flex-shrink: 0;
+        }
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .profile-image img {
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .role {
+            font-size: 16px;
+            color: #7C3AED;
+            font-weight: 600;
+            text-align: center;
+        }
+        .content-section {
+            flex: 1;
+            padding-left: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-width: 0;
+            max-width: calc(100% - 263px);
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #7C3AED;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #A78BFA;
+            padding-bottom: 5px;
+        }
+        .bio-text {
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .highlight-badge {
+            background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(124, 58, 237, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 40px;
+        }
+        .footer-logo {
+            height: 35px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/AdolfoSalas.jpg" alt="Adolfo Salas">
+        </div>
+        <div class="name">Adolfo<br>Salas</div>
+        <div class="role">Co-Fundador</div>
+    </div>
+    
+    <div class="content-section">
+        <div class="section-title">Perfil Profesional</div>
+        <div class="bio-text">
+            Wharton C-Suite Executive Program, MBA ESAN, Ingeniería Informática y Ingeniero Electrónico UNSA. Ejecutivo senior en minería, energía e infraestructura, con más de 24 años de experiencia estratégica, comercial y operativa en Perú y Latinoamérica. Experto en liderar transformaciones tecnológicas y digitales de alto impacto.
+        </div>
+        
+        <div class="section-title">Logros Destacados</div>
+        <div class="bio-text">
+            Ha gestionado responsabilidades comerciales y operativas superiores a USD 350 millones anuales, liderando equipos de más de 600 personas. Dirigió proyectos de transformación tecnológica y organizacional por valores superiores a USD 10 millones, manteniendo estándares de seguridad de cero daños. Reconocido por su capacidad para establecer relaciones estratégicas con clientes clave y socios tecnológicos globales.
+        </div>
+        
+        <div class="section-title">Rol Actual</div>
+        <div class="bio-text">
+            Advisory Principal (Partner) en Hatch Associates, firma global líder en consultoría e ingeniería multidisciplinaria especializada en minería, metalurgia, energía e infraestructura. Responsable del desarrollo de mercados en Latinoamérica, con presencia activa en más de 15 países. Aporta visión estratégica y capacidad de ejecución en proyectos de alta complejidad técnica y comercial.
+        </div>
+        
+        <div class="highlights">
+            <span class="highlight-badge">24+ años experiencia</span>
+            <span class="highlight-badge">Minería & Energía</span>
+            <span class="highlight-badge">USD 350M+ Revenue</span>
+            <span class="highlight-badge">Hatch Partner</span>
+            <span class="highlight-badge">15+ países</span>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/logo_variant_4.png" alt="GoalPraxis" class="footer-logo">
+    </div>
+</body>
+</html>

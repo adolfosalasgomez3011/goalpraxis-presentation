@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=720">
+    <title>Nuestra Propuesta</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            max-width: 1080px;
+            max-height: 720px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 45px 90px 45px;
+            position: relative;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 40px;
+            z-index: 20;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .footer-logo {
+            height: 50px;
+            width: auto;
+        }
+        .title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .question {
+            font-size: 18px;
+            color: #64748B;
+            text-align: center;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        .modules {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .module {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            border-top: 4px solid;
+        }
+        .module.consult { border-color: #1E40AF; }
+        .module.implement { border-color: #16A34A; }
+        .module.operate { border-color: #7C3AED; }
+        .module-number {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        .consult .module-number { background: #1E40AF; }
+        .implement .module-number { background: #16A34A; }
+        .operate .module-number { background: #7C3AED; }
+        .module-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1E293B;
+        }
+        .module-text {
+            font-size: 13px;
+            color: #64748B;
+            line-height: 1.5;
+        }
+        .value-box {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .value-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .value-text {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">¿Esta Solución Tendría Sentido?</div>
+    <div class="question">Modelo SolaaS: Consultoría + Implementación + Operación</div>
+    
+    <div class="modules">
+        <div class="module consult">
+            <div class="module-number">1</div>
+            <div class="module-title">Consultoría</div>
+            <div class="module-text">Evaluación con expertos, diagnóstico de madurez digital, roadmap estratégico</div>
+        </div>
+        
+        <div class="module implement">
+            <div class="module-number">2</div>
+            <div class="module-title">Implementación</div>
+            <div class="module-text">Plataformas IoT, Datawarehouses, Analítica de datos y Analítica Avanzada, Toma de decisiones autónoma</div>
+        </div>
+        
+        <div class="module operate">
+            <div class="module-number">3</div>
+            <div class="module-title">Operación</div>
+            <div class="module-text">Monitoreo 24/7, optimización continua, mejoras documentadas</div>
+        </div>
+    </div>
+    
+    <div class="value-box">
+        <div class="value-title">¿Qué opinan de este enfoque integrado?</div>
+        <div class="value-text">Expertos de la industria + Tecnología probada = ¿Resultados medibles?</div>
+    </div>
+    
+    <div class="footer-bar">
+        <img src="https://nelzfeoznjuewtnibelt.supabase.co/storage/v1/object/public/Marketinterview01/logo_variant_4.png" alt="GoalPraxis" class="footer-logo">
+    </div>
+</body>
+</html>

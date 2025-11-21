@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalPraxis - Presentación Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            padding: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            color: #1E40AF;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 20px;
+            color: #64748B;
+        }
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .slide-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .slide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .slide-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .slide-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 10px;
+        }
+        .slide-description {
+            font-size: 14px;
+            color: #64748B;
+            line-height: 1.6;
+        }
+        .instructions {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        .instructions h2 {
+            font-size: 24px;
+            color: #1E293B;
+            margin-bottom: 15px;
+        }
+        .instructions p {
+            font-size: 16px;
+            color: #64748B;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .instructions ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+        .instructions li {
+            font-size: 15px;
+            color: #64748B;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">GOAL PRAXIS</div>
+            <div class="tagline">Presentación de Validación - Entrevistas con Expertos Mineros</div>
+        </div>
+
+        <div class="slides-grid">
+            <a href="slide_01_title.html" target="_blank" class="slide-card">
+                <div class="slide-number">1</div>
+                <div class="slide-title">Título</div>
+                <div class="slide-description">Introducción a GoalPraxis con tono exploratorio</div>
+            </a>
+
+            <a href="slide_02_problem.html" target="_blank" class="slide-card">
+                <div class="slide-number">2</div>
+                <div class="slide-title">Desafíos</div>
+                <div class="slide-description">¿Qué problemas observan en sus operaciones?</div>
+            </a>
+
+            <a href="slide_03_solution.html" target="_blank" class="slide-card">
+                <div class="slide-number">3</div>
+                <div class="slide-title">Solución Propuesta</div>
+                <div class="slide-description">Modelo SolaaS: Consultoría + Implementación + Operación</div>
+            </a>
+
+            <a href="slide_04_value.html" target="_blank" class="slide-card">
+                <div class="slide-number">4</div>
+                <div class="slide-title">Propuesta de Valor</div>
+                <div class="slide-description">¿Qué beneficios son prioritarios para ustedes?</div>
+            </a>
+
+            <a href="slide_05_differentiation.html" target="_blank" class="slide-card">
+                <div class="slide-number">5</div>
+                <div class="slide-title">Diferenciación</div>
+                <div class="slide-description">¿Qué nos haría diferentes en el mercado?</div>
+            </a>
+
+            <a href="slide_06_business_model.html" target="_blank" class="slide-card">
+                <div class="slide-number">6</div>
+                <div class="slide-title">Modelo de Negocio</div>
+                <div class="slide-description">¿Qué estructura comercial prefieren?</div>
+            </a>
+
+            <a href="slide_07_gtm.html" target="_blank" class="slide-card">
+                <div class="slide-number">7</div>
+                <div class="slide-title">Estrategia GTM</div>
+                <div class="slide-description">¿Esta ruta al mercado tiene sentido?</div>
+            </a>
+
+            <a href="slide_08_ecosystem.html" target="_blank" class="slide-card">
+                <div class="slide-number">8</div>
+                <div class="slide-title">Ecosistema</div>
+                <div class="slide-description">¿Qué partners serían clave?</div>
+            </a>
+
+            <a href="slide_09_validation_questions.html" target="_blank" class="slide-card">
+                <div class="slide-number">9</div>
+                <div class="slide-title">Preguntas de Validación</div>
+                <div class="slide-description">Preguntas clave para expertos mineros</div>
+            </a>
+
+            <a href="slide_10_closing.html" target="_blank" class="slide-card">
+                <div class="slide-number">10</div>
+                <div class="slide-title">Cierre</div>
+                <div class="slide-description">Agradecimiento y siguiente paso</div>
+            </a>
+        </div>
+
+        <div class="instructions">
+            <h2>📋 Instrucciones para la Presentación</h2>
+            <p><strong>Propósito:</strong> Esta presentación está diseñada para entrevistas de validación con expertos de la industria minera. El tono es exploratorio y busca feedback, no es una presentación de ventas.</p>
+            
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li><strong>Tono "Asking" vs "Telling":</strong> Cada slide plantea preguntas para validar hipótesis</li>
+                <li><strong>Mínimo texto, máxima claridad:</strong> Fonts grandes, conceptos simples</li>
+                <li><strong>Formato profesional:</strong> 1080x720px, diseño corporativo limpio</li>
+                <li><strong>Flujo conversacional:</strong> De problemas → solución → modelo comercial → validación</li>
+            </ul>
+
+            <p><strong>Cómo Usar:</strong></p>
+            <ul>
+                <li>Haga clic en cada tarjeta para abrir el slide en una nueva pestaña</li>
+                <li>Use las slides como guía conversacional, no como script rígido</li>
+                <li>La Slide 9 contiene preguntas específicas para profundizar</li>
+                <li>Tome notas durante las respuestas para iterar la propuesta</li>
+            </ul>
+
+            <p><strong>Próximos Pasos:</strong></p>
+            <ul>
+                <li>Después de 3-5 entrevistas, consolidar aprendizajes</li>
+                <li>Ajustar la propuesta de valor según el feedback</li>
+                <li>Refinar el modelo comercial basado en preferencias</li>
+                <li>Iterar hacia una presentación de ventas más asertiva</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

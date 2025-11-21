@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalPraxis - Presentación Completa</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0F172A;
+            overflow-x: hidden;
+        }
+        
+        .presentation-container {
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        .slide-wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            position: relative;
+        }
+        
+        .slide-frame {
+            width: min(90vw, calc(90vh * 1.5));
+            height: min(60vw, 90vh);
+            max-width: 1080px;
+            max-height: 720px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .slide-frame iframe {
+            width: 1080px;
+            height: 720px;
+            border: none;
+            transform-origin: 0 0;
+        }
+        
+        .nav-controls {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 50px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        
+        .nav-btn {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .slide-counter {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            min-width: 100px;
+            text-align: center;
+        }
+        
+        .slide-menu {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px 15px;
+            border-radius: 30px;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .slide-menu-item {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            margin: 12px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slide-menu-item.active {
+            background: #3B82F6;
+            transform: scale(1.5);
+        }
+        
+        .slide-menu-item:hover {
+            background: rgba(59, 130, 246, 0.7);
+            transform: scale(1.3);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-controls {
+                padding: 15px 20px;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .slide-counter {
+                font-size: 14px;
+                min-width: 80px;
+            }
+            
+            .slide-menu {
+                right: 15px;
+                padding: 15px 10px;
+            }
+        }
+        
+        /* Scroll snap */
+        @supports (scroll-snap-type: y mandatory) {
+            .presentation-container {
+                scroll-snap-type: y mandatory;
+                overflow-y: scroll;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container" id="presentation">
+        <!-- Slide 1: Title -->
+        <div class="slide-wrapper" data-slide="1">
+            <div class="slide-frame">
+                <iframe src="slide_01_title.html" id="frame-1"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Erick Enríquez CV -->
+        <div class="slide-wrapper" data-slide="2">
+            <div class="slide-frame">
+                <iframe src="slide_02_cv_erick.html" id="frame-2"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Mauricio San Roman CV -->
+        <div class="slide-wrapper" data-slide="3">
+            <div class="slide-frame">
+                <iframe src="slide_03_cv_mauricio.html" id="frame-3"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 4: Adolfo Salas CV -->
+        <div class="slide-wrapper" data-slide="4">
+            <div class="slide-frame">
+                <iframe src="slide_04_cv_adolfo.html" id="frame-4"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Problem -->
+        <div class="slide-wrapper" data-slide="5">
+            <div class="slide-frame">
+                <iframe src="slide_05_problem.html" id="frame-5"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 6: Solution -->
+        <div class="slide-wrapper" data-slide="6">
+            <div class="slide-frame">
+                <iframe src="slide_06_solution.html" id="frame-6"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 7: Value Proposition -->
+        <div class="slide-wrapper" data-slide="7">
+            <div class="slide-frame">
+                <iframe src="slide_07_value.html" id="frame-7"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 8: Differentiation -->
+        <div class="slide-wrapper" data-slide="8">
+            <div class="slide-frame">
+                <iframe src="slide_08_differentiation.html" id="frame-8"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 9: Business Model -->
+        <div class="slide-wrapper" data-slide="9">
+            <div class="slide-frame">
+                <iframe src="slide_09_business_model.html" id="frame-9"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 10: Go-to-Market -->
+        <div class="slide-wrapper" data-slide="10">
+            <div class="slide-frame">
+                <iframe src="slide_10_gtm.html" id="frame-10"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 11: Ecosystem -->
+        <div class="slide-wrapper" data-slide="11">
+            <div class="slide-frame">
+                <iframe src="slide_11_ecosystem.html" id="frame-11"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 12: Validation Questions -->
+        <div class="slide-wrapper" data-slide="12">
+            <div class="slide-frame">
+                <iframe src="slide_12_validation_questions.html" id="frame-12"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 13: Thank You (old closing) -->
+        <div class="slide-wrapper" data-slide="13">
+            <div class="slide-frame">
+                <iframe src="slide_13_thank_you.html" id="frame-13"></iframe>
+            </div>
+        </div>
+        
+        <!-- Slide 14: Dynamic Closing -->
+        <div class="slide-wrapper" data-slide="14">
+            <div class="slide-frame">
+                <iframe src="slide_14_closing.html" id="frame-14"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn" onclick="navigateSlide(-1)">← Anterior</button>
+        <span class="slide-counter" id="slideCounter">1 / 14</span>
+        <button class="nav-btn" id="nextBtn" onclick="navigateSlide(1)">Siguiente →</button>
+    </div>
+    
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu"></div>
+    
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 14;
+        
+        // Create slide menu dots
+        const slideMenu = document.getElementById('slideMenu');
+        for (let i = 1; i <= totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'slide-menu-item';
+            if (i === 1) dot.classList.add('active');
+            dot.onclick = () => goToSlide(i);
+            slideMenu.appendChild(dot);
+        }
+        
+        function updateUI() {
+            document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+            
+            // Update menu dots
+            document.querySelectorAll('.slide-menu-item').forEach((dot, index) => {
+                dot.classList.toggle('active', index + 1 === currentSlide);
+            });
+        }
+        
+        function navigateSlide(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 1 && newSlide <= totalSlides) {
+                goToSlide(newSlide);
+            }
+        }
+        
+        function goToSlide(slideNumber) {
+            currentSlide = slideNumber;
+            const slideWrapper = document.querySelector(`[data-slide="${slideNumber}"]`);
+            slideWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            updateUI();
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+                e.preventDefault();
+                if (currentSlide < totalSlides) navigateSlide(1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (currentSlide > 1) navigateSlide(-1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                goToSlide(1);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                goToSlide(totalSlides);
+            }
+        });
+        
+        // Detect slide changes via scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    currentSlide = parseInt(entry.target.getAttribute('data-slide'));
+                    updateUI();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.slide-wrapper').forEach(slide => {
+            observer.observe(slide);
+        });
+        
+        // Scale iframes to fit
+        function scaleIframes() {
+            document.querySelectorAll('.slide-frame').forEach(frame => {
+                const iframe = frame.querySelector('iframe');
+                const scaleX = frame.offsetWidth / 1080;
+                const scaleY = frame.offsetHeight / 720;
+                const scale = Math.min(scaleX, scaleY);
+                iframe.style.transform = `scale(${scale})`;
+            });
+        }
+        
+        window.addEventListener('load', scaleIframes);
+        window.addEventListener('resize', scaleIframes);
+    </script>
+</body>
+</html>
