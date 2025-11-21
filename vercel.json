@@ -6,12 +6,12 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/presentation_reveal.html",
+      "destination": "/presentation_reveal",
       "permanent": false
     },
     {
       "source": "/presentacion",
-      "destination": "/presentation_complete.html"
+      "destination": "/presentation_complete"
     }
   ],
   "headers": [
