@@ -6,7 +6,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/index.html"
+      "destination": "/presentation_reveal.html"
     },
     {
       "source": "/presentacion",
